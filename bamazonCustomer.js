@@ -20,24 +20,21 @@ var i;
 
 connection.connect(function(err) {
   if (err) throw err;
-  console.log("connected as id " + connection.threadId);
+  //  console.log("connected as id " + connection.threadId);
 
   connection.query("SELECT * FROM products", function(err, res) {
     if (err) throw err;
 
-    console.log(res);
+  //   console.log(res);
 
     for (i = 0; i < res.length; i++) {
     console.log(endOfLine);
     console.log(res[i].product_name);
     console.log("$" + res[i].price);
-    console.log("Item ID: " + res[i].item_id + endOfLine);
-    console.log(res[i].stock_quantity);
-    console.log("--------------------------------");
-
+    console.log("Item ID: " + res[i].item_id);
+    console.log("Number available: " + res[i].stock_quantity + endOfLine);
+    console.log("--------------------------------" + endOfLine);
   }
-
-
 
   prompt.start();
 console.log("Please enter the product ID for the product you would like to buy." + endOfLine + "After you have entered the product ID and pressed enter, put in the number of items you would like to purchase and press enter." + endOfLine);
@@ -60,26 +57,12 @@ quantity = result.number;
           console.log("Your order has been processed. " + quantity + " " + prod[0].product_name + "  Total: $" + prod[0].price * quantity);
           process.exit();
         });
-
-
-
     }
-
-
-
-
-
   });
-
-
-
   });
-
     function onErr(err) {
     console.log(err);
     return 1;
   }
-
-
   });
 });
