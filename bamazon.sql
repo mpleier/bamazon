@@ -23,3 +23,4 @@ VALUES ("Comic", "Toy", 22.50, 400, 0), ("Toy", "Toy", 227.50, 100, 0), ("Ink", 
 -- ### Alternative way to insert more than one row
 -- INSERT INTO products (flavor, price, quantity)
 -- VALUES ("vanilla", 2.50, 100), ("chocolate", 3.10, 120), ("strawberry", 3.25, 75);
+

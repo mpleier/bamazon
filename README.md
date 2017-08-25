@@ -33,3 +33,16 @@ Enter the name for the product you would like to add.
 After you have entered the name and pressed enter, put in the department you would like to add the product to and press enter.
 
 Then input the price in dollars. Only enter digits and a decimal point.
+
+instructions for bamazonSupervisor.js.
+
+Run bamazonSupervisor.js.
+
+You will see two options.
+
+To View Product Sales by Department, select "View Product Sales by Department".
+
+To add a department, select "Create New Department".
+
+Enter the name for the department you would like to add.
+After you have entered the name and pressed enter, put in the department overhead costs and press enter.
