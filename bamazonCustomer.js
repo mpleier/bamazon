@@ -25,7 +25,7 @@ connection.connect(function(err) {
   connection.query("SELECT * FROM products", function(err, res) {
     if (err) throw err;
 
-  //   console.log(res);
+//     console.log(res);
 
     for (i = 0; i < res.length; i++) {
     console.log(endOfLine);
@@ -55,6 +55,9 @@ quantity = result.number;
         connection.query(sql, function (err, result) {
           if (err) throw err;
           console.log("Your order has been processed. " + quantity + " " + prod[0].product_name + "  Total: $" + prod[0].price * quantity);
+          });
+          connection.query("UPDATE products SET product_sales = product_sales + " + prod[0].price * quantity + " WHERE item_id = " + result.ID , function (err, result) {
+          if (err) throw err;
           process.exit();
         });
     }

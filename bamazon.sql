@@ -10,12 +10,13 @@ CREATE TABLE products (
   department_name VARCHAR(45) NOT NULL,
   price DECIMAL(10,2) NULL,
   stock_quantity INT NULL,
+  product_sales DECIMAL(10,2) NULL,
   PRIMARY KEY (item_id)
 );
 
 
-INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("Comic", "Toy", 22.50, 100), ("Toy", "Toy", 227.50, 100), ("Ink", "Commodity", 2200.50, 100), ("Goat", "Livestock", 222.22, 100), ("Sheep", "Livestock", 220.50, 100), ("Wood", "Lumber", 21.80, 400), ("DVD", "Media", 25.20, 200), ("Book", "Media", 22.50, 100), ("Dog", "Pet", 22.50, 100), ("Cat", "Pet", 22.50, 100);
+INSERT INTO products (product_name, department_name, price, stock_quantity, product_sales)
+VALUES ("Comic", "Toy", 22.50, 400, 0), ("Toy", "Toy", 227.50, 100, 0), ("Ink", "Commodity", 2200.50, 100, 0), ("Goat", "Livestock", 222.22, 100, 0), ("Sheep", "Livestock", 220.50, 100, 0), ("Wood", "Lumber", 21.80, 400, 0), ("DVD", "Media", 25.20, 200, 0), ("Book", "Media", 22.50, 100, 0), ("Dog", "Pet", 22.50, 100, 0), ("Cat", "Pet", 22.50, 100, 0);
 
 
 
