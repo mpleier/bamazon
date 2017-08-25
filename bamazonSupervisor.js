@@ -31,7 +31,7 @@ inquirer.prompt([
 ]).then(function(selection) {
   switch(selection.mainMenu) {
   case "View Product Sales by Department":
-      connection.query("SELECT departments.departments.department_id, bamazon.products.department_name, departments.departments.department_name, departments.departments.over_head_costs, SUM (bamazon.products.product_sales) AS product_sales FROM products INNER JOIN departments.departments ON bamazon.products.department_name=departments.departments.department_name GROUP BY bamazon.products.department_name;", function(err, res) {
+      connection.query("SELECT departments.departments.department_id, bamazon.products.department_name, departments.departments.department_name, departments.departments.over_head_costs, SUM (bamazon.products.product_sales) AS product_sales, (bamazon.products.product_sales - departments.departments.over_head_costs) AS total_profit FROM products INNER JOIN departments.departments ON bamazon.products.department_name=departments.departments.department_name GROUP BY departments.departments.department_id;", function(err, res) {
       if (err) throw err;
       console.table(res);
       process.exit();
