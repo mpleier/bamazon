@@ -43,7 +43,7 @@ connection.connect(function(err) {
       console.log("$" + res[i].price);
       console.log("Item ID: " + res[i].item_id);
       console.log("Number available: " + res[i].stock_quantity + endOfLine);
-            console.log("Sales: " + res[i].product_sales + endOfLine);
+            console.log("Sales: $" + res[i].product_sales + endOfLine);
       console.log("--------------------------------" + endOfLine);
     }
       process.exit();
