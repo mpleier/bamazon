@@ -2,6 +2,8 @@
 
 Run bamazon.sql and departments.sql.
 
+Run npm install.
+
 instructions for bamazonCustomer.js.
 
 Run bamazonCustomer.js.
