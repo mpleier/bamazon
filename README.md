@@ -1,5 +1,7 @@
 # bamazon
 
+Run bamazon.sql and departments.sql.
+
 instructions for bamazonCustomer.js.
 
 Run bamazonCustomer.js.
